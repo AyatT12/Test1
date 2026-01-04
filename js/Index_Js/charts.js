@@ -107,7 +107,6 @@ var carsOptions = {
   ],
   chart: {
     type: "radialBar",
-    height: 350,
     fontFamily: "'Cairo','Arial',sans-serif"
   },
   plotOptions: {
@@ -158,3 +157,4 @@ new ApexCharts(
   document.querySelector("#CarsChart"),
   carsOptions
 ).render();
+
