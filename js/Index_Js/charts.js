@@ -131,7 +131,19 @@ var carsOptions = {
             opts.w.globals.series[opts.seriesIndex]
           );
         }
-      }
+      },
+      dataLabels: {
+  name: {
+    show: false
+  },
+  value: {
+    show: false
+  },
+  total: {
+    show: false
+  }
+}
+
     }
   },
   colors: [
