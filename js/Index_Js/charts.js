@@ -4,8 +4,8 @@ function rtlLabel(val) {
 // 
 var balanceOptions = {
   series: [
-    { name: rtlLabel("الموظف"), data: [2000, 6000, 8000, 1000, 1200] },
-    { name: rtlLabel("الفرع"), data: [4000, 10000, 12000, 6000, 200000] },
+    { name: rtlLabel("الموظف"), data: [4062.50, 0, 0, 0, 0] },
+    { name: rtlLabel("الفرع"), data: [13236.85, 7777.75, 147544.17, 10875.02,8568.42 ] },
   ],
   colors: ["rgba(54,162,235,1)", "rgba(255,99,132,1)"],
   chart: {
@@ -67,7 +67,7 @@ new ApexCharts(
 ).render();
 // 
 var contractsOptions = {
-  series: [44, 55, 41, 17],
+  series: [1, 1, 1, 0],
   labels: [
     rtlLabel("لاحقًا"),
     rtlLabel("غدًا"),
@@ -82,7 +82,6 @@ var contractsOptions = {
   ],
   chart: {
     type: "donut",
-    height: 260,
     fontFamily: "'Cairo','Arial',sans-serif"
   },
   legend: {
@@ -99,7 +98,7 @@ new ApexCharts(
 
 // 
 var carsOptions = {
-  series: [5, 3, 27, 2],
+  series: [4, 1, 30, 0],
   labels: [
     rtlLabel("المتاحة"),
     rtlLabel("المؤجرة"),
@@ -123,6 +122,7 @@ var carsOptions = {
       barLabels: {
         enabled: true,
         fontSize: "12px",
+        fontWeight:"500",
         offsetX: -8,
         formatter: function (seriesName, opts) {
           return (
