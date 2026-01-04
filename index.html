@@ -204,12 +204,12 @@
                                                         <div class="data">
                                                                 <i class="bi bi-list card-menu-icon"></i>
                                                                 <div class="card-info-popup chart-p">
-                                                                    <p>رصيد الفرع: <span>47,377.80</span></p>
-                                                                    <p>الرصيد المتاح: <span>47,377.80</span></p>
+                                                                    <p>رصيد الفرع: <span>188,002.21</span></p>
+                                                                    <p>الرصيد المتاح: <span>188,002.21</span></p>
                                                                     <p>الرصيد المحجوز: <span>0.00</span></p>
                                                                     <hr style="margin: .4rem 0rem; color: #FF9626;opacity: 1;">
-                                                                    <p>رصيد الموظف: <span>1,168.35</span></p>
-                                                                    <p>الرصيد المتاح: <span>1,168.35</span></p>
+                                                                    <p>رصيد الموظف: <span>4,062.50</span></p>
+                                                                    <p>الرصيد المتاح: <span>4,062.50</span></p>
                                                                     <p>الرصيد المحجوز: <span>0.00</span></p>
                                                                 </div>
                                                         </div>
@@ -251,7 +251,7 @@
 
                                                     <div class="col-xl-4 col-md-6 car-item">
                                                         <div class="card chart-card p-2">
-                                                            <p class="chart-p">سيارات الفرع : <span>500</span></p>
+                                                            <p class="chart-p">سيارات الفرع : <span>35</span></p>
                                                             <div class="card-body p-0">
                                                                 <div class="chart-container">
                                                                     <div id="CarsChart"
@@ -2576,24 +2576,33 @@
         });
     </script>
 <script>
-    document.addEventListener("click", function (e) {
-        const icon = e.target.closest(".card-menu-icon");
-        if (icon) {
-            e.stopPropagation();
+  document.addEventListener("click", function (e) {
+    const icon = e.target.closest(".card-menu-icon");
 
-            const popup = icon.nextElementSibling;
-            const isOpen = popup.classList.contains("show");
 
-            if (!isOpen) {
-                popup.classList.add("show");
-            } else {
-                popup.classList.remove("show");
-            }
+    if (icon) {
+      e.stopPropagation();
 
-            return;
-        }
-    });
+      const popup = icon.nextElementSibling;
+      const isOpen = popup.classList.contains("show");
+
+      document.querySelectorAll(".card-info-popup").forEach(p =>
+        p.classList.remove("show")
+      );
+
+      if (!isOpen) {
+        popup.classList.add("show");
+      }
+
+      return;
+    }
+
+    document.querySelectorAll(".card-info-popup").forEach(p =>
+      p.classList.remove("show")
+    );
+  });
 </script>
+
 
 </body>
 
